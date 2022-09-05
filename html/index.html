@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <title>PL1 - Formulário</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <h1>Formulário</h1>
+        </div>
+
+        <form class="form" name="formulario">
+            <div class="form-control">
+                <label>Insira seu CPF: </label>
+                <input type="text" name="cpf" id="CPFInput" placeholder="Seu CPF aqui" maxlength="11" oninput="criaMascara('CPF')">
+            </div>
+
+            <div class="form-control">
+                <label>Insira seu nome: </label>
+                <input type="text" name="nome" placeholder="Seu nome aqui">
+            </div>
+
+            <div class="form-control">
+                <H2>Sexo: </H2> 
+                <br>
+                <label for="F" class="radio-inline"><input type="radio" name="sexo" id="F">Feminino</label>
+                <br>
+                <label for="M" class="radio-inline"><input type="radio" name="sexo" id="M">Masculino</label>
+            </div>
+
+            <div class="form-control">
+                <label>Insira seu e-mail: </label>
+                <input type="text" name="email" placeholder="Seu e-mail aqui">
+            </div>
+
+            <div class="form-control">
+                <label for="IF" class="checkbox-inline">É aluno do IFSP?<input type="checkbox" name="IFSP" id="IF" value="Sim"></label>
+            </div>
+
+            <div class="form-control">
+                <label for="selecao">Câmpus IFSP: </label>
+                <select name="select" id="selecao">
+                    <option value="Araraquara">IFSP - Câmpus Araraquara</option>
+                    <option value="Avaré">IFSP - Câmpus Avaré</option>
+                    <option value="Barretos">IFSP - Câmpus Barretos</option>
+                    <option value="Birigui">IFSP - Câmpus Birigui</option>
+                    <option value="Boituva">IFSP - Câmpus Boituva</option>
+                    <option value="Bragança Paulista">IFSP - Câmpus Bragança Paulista</option>
+                    <option value="Campinas">IFSP - Câmpus Campinas</option>
+                    <option value="Campos Do Jordão">IFSP - Câmpus Campos do Jordão</option>
+                    <option value="Capivari">IFSP - Câmpus Capivari</option>
+                    <option value="Caraguatatuba">IFSP - Câmpus Caraguatatuba</option>
+                    <option value="Catanduva">IFSP - Câmpus Catanduva</option>
+                    <option value="Cubatão" selected>IFSP - Câmpus Cubatão</option>
+                    <option value="Guarulhos">IFSP - Câmpus Guarulhos</option>
+                    <option value="Hortolândia">IFSP - Câmpus Hortolândia</option>
+                    <option value="Ilha Solteira">IFSP - Câmpus Ilha Solteira</option>
+                    <option value="Itapetininga">IFSP - Câmpus Itapetininga</option>
+                    <option value="Itaquaquecetuba">IFSP - Câmpus Itaquaquecetuba</option>
+                    <option value="Jacareí">IFSP - Câmpus Jacareí</option>
+                    <option value="Jundiaí">IFSP - Câmpus Jundiaí</option>
+                    <option value="Matão">IFSP - Câmpus Matão</option>
+                    <option value="Piracicaba">IFSP - Câmpus Piracicaba</option>
+                    <option value="Pirituba">IFSP - Câmpus Pirituba</option>
+                    <option value="Presidente Epitácio">IFSP - Câmpus Presidente Epitácio</option>
+                    <option value="Registro">IFSP - Câmpus Registro</option>
+                    <option value="Salto">IFSP - Câmpus Salto</option>
+                    <option value="São Carlos">IFSP - Câmpus São Carlos</option>
+                    <option value="São João Da Boa Vista">IFSP - Câmpus São João da Boa Vista</option>
+                    <option value="São José do Rio Preto">IFSP - Câmpus São José do Rio Preto</option>
+                    <option value="São José dos Campos">IFSP - Câmpus São José dos Campos</option>
+                    <option value="São Miguel Paulista">IFSP - Câmpus São Miguel Paulista</option>
+                    <option value="São Paulo">IFSP - Câmpus São Paulo</option>
+                    <option value="São Roque">IFSP - Câmpus São Roque</option>
+                    <option value="Sertãozinho">IFSP - Câmpus Sertãozinho</option>
+                    <option value="Sorocaba">IFSP - Câmpus Sorocaba</option>
+                    <option value="Suzano">IFSP - Câmpus Suzano</option>
+                    <option value="Tupa">IFSP - Câmpus Tupã</option>
+                    <option value="Votuporanga">IFSP - Câmpus Votuporanga</option>  
+                    <option value=" - ">Não sou aluno IFSP</option>  
+                </select>
+            </div>
+
+            <div class="form-control">
+                <H2>Necessidades Especiais?</H2>
+                <br>
+                <label for="Sim" class="radio-inline"><input type="radio" name="NE" id="Sim">Sim</label>
+                <br>
+                <label for="Não" class="radio-inline"><input type="radio" name="NE" id="Não">Não</label>
+            </div>
+
+            <div class="form-control">
+                <H2>Quais?</H2>
+                <input type="checkbox" name="DV" value="Deficiência Visual"> Deficiência Visual
+                <input type="checkbox" name="DA" value="Deficiência Auditiva"> Deficiência Auditiva
+                <input type="checkbox" name="DMO" value="Deficiência Motora"> Deficiência Motora
+                <input type="checkbox" name="DME" value="Deficiência Mental"> Deficiência Mental
+                <input type="checkbox" name="NHM" value="Nenhuma"> Nenhuma
+            </div>
+
+            <div class="form-control">
+                <H2>Áreas de Interesse: </H2>
+                <input type="checkbox" name="T" value="Tecnologia"> Tecnologia
+                <input type="checkbox" name="EX" value="Exatas"> Exatas
+                <input type="checkbox" name="H" value="Humanas"> Humanas
+                <input type="checkbox" name="B" value="Biológicas"> Biológicas
+                <input type="checkbox" name="ED" value="Educação"> Educação
+            </div>
+
+            <div class="form-control">
+                <H2>Hobbies: </H2>
+                <input type="checkbox" name="JAR" value="Jardinagem"> Jardinagem
+                <input type="checkbox" name="ART" value="Artesanato"> Artesanato
+                <input type="checkbox" name="LEI" value="Leitura"> Leitura
+                <input type="checkbox" name="ESC" value="Escrita"> Escrita
+                <input type="checkbox" name="MUS" value="Musica"> Música
+                <input type="checkbox" name="PIN" value="Pintura"> Pintura
+                <input type="checkbox" name="RED" value="RedesSociais"> Redes Sociais
+                <input type="checkbox" name="VIA" value="Viagens"> Viagens
+                <input type="checkbox" name="SER" value="Series"> Séries
+                <input type="checkbox" name="ACA" value="Academia"> Academia
+                <input type="checkbox" name="OUT" value="Outros"> Outros
+            </div>
+
+            <div class="form-control">
+                <textarea name="sugestoes" cols="120" rows="10" placeholder="Insira aqui suas sugestões"></textarea>
+            </div>
+
+          
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
